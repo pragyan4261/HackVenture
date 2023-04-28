@@ -1,4 +1,4 @@
-README
+
 This is team web maniacs, A first year team from NIT Silchar, and the problem statement we chose was-
 2. Predictive policing which involves issuing advisory (how likely a crime can happen) to people who visit a certain place/city/country during a certain time.
 OVERVIEW
@@ -32,4 +32,10 @@ If result<8 --- Green
 If  8<result<16 --- Yellow
 If result> 16 --- Red
 
-Because of time constraint we could not complete the whole backend logic and integration, we apologize for that. But we have provided the whole MongoDB database for storing crime logs which is functional on the website and a rough framework of the backend logic using javascript.
+DATABASE
+For database we have used MongoDB and integrated it using mongoose and to run the code we have used ExpressJS. In data base fields given are crime_rating(level), city(place), date, crime(category).
+and using mongoose we are filling this table from police webpage table.
+ExpressJS is used to run and check this code.
+on this database the backend logic could be run to give the crime rating(colorgraded) as output to the tourist webpage.
+
+Because of time constraint we could not complete the whole backend logic and integration, we apologize for that. But we have provided the whole MongoDB database and mongooose code for storing crime logs which is functional on the website and a rough framework of the backend logic using javascript.
