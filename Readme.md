@@ -32,6 +32,8 @@ If result<8 --- Green
 If  8<result<16 --- Yellow
 If result> 16 --- Red
 
+PLease have a look at the file named backend_algo.js for the rough framework of the backend logic.
+
 DATABASE
 For database we have used MongoDB and integrated it using mongoose and to run the code we have used ExpressJS. In data base fields given are crime_rating(level), city(place), date, crime(category).
 and using mongoose we are filling this table from police webpage table.
@@ -39,3 +41,5 @@ ExpressJS is used to run and check this code.
 on this database the backend logic could be run to give the crime rating(colorgraded) as output to the tourist webpage.
 
 Because of time constraint we could not complete the whole backend logic and integration, we apologize for that. But we have provided the whole MongoDB database and mongooose code for storing crime logs which is functional on the website and a rough framework of the backend logic using javascript.
+
+
