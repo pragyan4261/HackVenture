@@ -1,0 +1,162 @@
+[{
+    "serial_no": 1,
+    "crime": "Assault",
+    "date": "2023-04-25",
+    "city": "Los Angeles",
+    "description": "A pedestrian was attacked on the street by an unknown assailant.",
+    "status": "Open",
+    "crime_rating": 3
+  },
+  {
+    "serial_no": 2,
+    "crime": "Burglary",
+    "date": "2023-04-22",
+    "city": "New York City",
+    "description": "A residential property was broken into and multiple items were stolen.",
+    "status": "Closed",
+    "crime_rating": 4
+  },
+  {
+    "serial_no": 3,
+    "crime": "Theft",
+    "date": "2023-04-20",
+    "city": "Chicago",
+    "description": "A cell phone was stolen from an unattended purse in a busy public area.",
+    "status": "Open",
+    "crime_rating": 2
+  },
+  {
+    "serial_no": 4,
+    "crime": "Arson",
+    "date": "2023-04-19",
+    "city": "San Francisco",
+    "description": "A building was set on fire, resulting in significant damage.",
+    "status": "Open",
+    "crime_rating": 5
+  },
+  {
+    "serial_no": 5,
+    "crime": "Robbery",
+    "date": "2023-04-18",
+    "city": "Boston",
+    "description": "A convenience store was robbed at gunpoint, and the suspects fled the scene.",
+    "status": "Open",
+    "crime_rating": 4
+  },
+  {
+    "serial_no": 6,
+    "crime": "Vandalism",
+    "date": "2023-04-16",
+    "city": "Houston",
+    "description": "A park bench was vandalized with spray paint.",
+    "status": "Closed",
+    "crime_rating": 1
+  },
+  {
+    "serial_no": 7,
+    "crime": "Theft",
+    "date": "2023-04-14",
+    "city": "Atlanta",
+    "description": "A wallet was stolen from a backpack on a crowded subway train.",
+    "status": "Open",
+    "crime_rating": 2
+  },
+  {
+    "serial_no": 8,
+    "crime": "Assault",
+    "date": "2023-04-12",
+    "city": "Philadelphia",
+    "description": "A physical altercation broke out at a sports game, resulting in multiple injuries.",
+    "status": "Closed",
+    "crime_rating": 3
+  },
+  {
+    "serial_no": 9,
+    "crime": "Burglary",
+    "date": "2023-04-10",
+    "city": "Seattle",
+    "description": "A business was broken into overnight, and valuable equipment was stolen.",
+    "status": "Open",
+    "crime_rating": 4
+  },
+  {
+    "serial_no": 11,
+    "crime": "Vandalism",
+    "date": "2023-04-08",
+    "city": "Denver",
+    "description": "Graffiti was painted on the side of a building overnight.",
+    "status": "Closed",
+    "crime_rating": 1
+  },
+  {
+    "serial_no": 12,
+    "crime": "Robbery",
+    "date": "2023-04-06",
+    "city": "Miami",
+    "description": "A jewelry store was robbed at gunpoint, and the suspects fled the scene.",
+    "status": "Open",
+    "crime_rating": 5
+  },
+  {
+    "serial_no": 13,
+    "crime": "Theft",
+    "date": "2023-04-04",
+    "city": "Portland",
+    "description": "A laptop was stolen from a parked car.",
+    "status": "Closed",
+    "crime_rating": 2
+  },
+  {
+    "serial_no": 14,
+    "crime": "Assault",
+    "date": "2023-04-02",
+    "city": "Washington D.C.",
+    "description": "A group of individuals were involved in a physical altercation in a public park.",
+    "status": "Open",
+    "crime_rating": 3
+  },
+  {
+    "serial_no": 15,
+    "crime": "Burglary",
+    "date": "2023-03-31",
+    "city": "Dallas",
+    "description": "A home was broken into while the residents were away, and multiple items were stolen.",
+    "status": "Closed",
+    "crime_rating": 4
+  },
+  {
+    "serial_no": 16,
+    "crime": "Fraud",
+    "date": "2023-03-29",
+    "city": "Phoenix",
+    "description": "A scam artist posed as a utility worker and tricked a homeowner into giving them access to their home.",
+    "status": "Open",
+    "crime_rating": 2
+  },
+  {
+    "serial_no": 17,
+    "crime": "Robbery",
+    "date": "2023-03-27",
+    "city": "Las Vegas",
+    "description": "An individual was mugged on the street by a group of assailants.",
+    "status": "Open",
+    "crime_rating": 4
+  },
+  {
+    "serial_no": 18,
+    "crime": "Theft",
+    "date": "2023-03-25",
+    "city": "San Diego",
+    "description": "A bicycle was stolen from a bike rack outside of a coffee shop.",
+    "status": "Closed",
+    "crime_rating": 2
+  },
+  {
+    "serial_no": 19,
+    "crime": "Assault",
+    "date": "2023-03-23",
+    "city": "Minneapolis",
+    "description": "A bar fight broke out, resulting in several injuries and arrests.",
+    "status": "Closed",
+    "crime_rating": 3
+  }]

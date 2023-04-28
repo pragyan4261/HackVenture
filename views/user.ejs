@@ -1,0 +1,47 @@
+
+<%- include('partial/header') %> 
+        <script>
+            a="Thinking of travelling to a place? Don't worry, we are here to provide you with security guidance";
+             function sleep(millisec){
+                return new Promise(resolve=>{
+                    setTimeout(()=>{resolve('')},millisec);
+                })
+            }
+            async function typit(){
+                for(let x=0;x<a.length;x++){
+                    document.getElementById("welcome").innerHTML=document.getElementById("welcome").innerHTML+a[x];
+                    await sleep(20);
+                }
+            }
+            function shift(){
+               document.body.scrollTop="100%";
+            }
+        </script>
+<%- include('partial/header') %>         
+    
+    <body onload="typit()">
+        <header>
+            <div id="top-right">.</div>
+            <h1>Travel Safe!!</h1>
+            <div id="welcome"></div>
+        </header>
+        <center>
+        <form method="post" onsubmit="jsFunction();return false">
+            <div id="form">
+                <div id="lbls">
+                    <label>Which Place are you visiting?</label>
+                    <label>Duration of Visit:</label>
+                    <label>Please Enter your Date of visit:</label>
+                </div>
+                <div id="flds">
+                    <input type="text" id="city" name="city" class="input_box" placeholder="Eg: Guwahati">
+                    <input type="number" id="duration" name="duration" min="1" max="100" step="1" value="1">
+                    <input type="date" id="date" name="date" class="input_box">
+                </div>
+                <input type="submit"  id="safe" value="Am I safe?" onclick="shift()" method="post">
+            </div>
+        </form>
+     
+        </center>
+        <%- include('partial/footer') %> 
+    
