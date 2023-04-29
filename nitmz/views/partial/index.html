@@ -1,0 +1,337 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@200;400&family=Roboto:wght@100;500&display=swap" rel="stylesheet">
+        <!---->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu&display=swap" rel="stylesheet">
+        <style>
+            body{
+                overflow-x: hidden;
+                background-image: linear-gradient(180deg,#b3f4ff,#ffffff);
+                font-family: 'Monteserrat',sans-serif;
+            }
+            #logo{
+                position: relative;
+                left:-3cm;
+                height:3cm;
+                width:3cm;
+            }
+            
+            header{
+                width:100%;
+                display:flex;
+                flex-direction:row;
+                justify-content: space-around;
+                color:#390e5c;
+                background-color: transparent;
+            }
+            header #options-bar{
+                position: relative;
+                top:0.5cm;
+                width:60%;
+                display:flex;
+                flex-direction:row;
+                justify-content: space-around;
+            }
+            header #options-bar #police{
+                position:relative;
+                left:4cm;
+                top:-0.2cm;
+                word-spacing: 0.2cm;
+                background-color: #0e305c;
+                color:#ffffff;
+                padding:0.2cm;
+                padding-top: 0.2cm;
+                border:0px solid transparent;
+                border-radius: 10px;
+                height:0.6cm;
+                transition-duration: 1s;
+                text-decoration: none;
+            }
+            header #options-bar #police:hover{
+                cursor:pointer;
+                background-color: #a8bedb;
+                box-shadow: 0 0 10px #a8bedb;
+                color:#0e305c;
+                transition-duration: 1s;
+            }
+            #opener{
+                position:relative;
+                left:25%;
+                font-size:1.5cm;
+                top:3cm;
+            }
+            #welcome{
+            position: relative;
+            left:35%;
+            top:3cm;
+            font-size:1cm;
+            color:#000000;
+            width:50%;
+            overflow:wrap;
+            font-family:  'Roboto', sans-serif;
+            font-weight:800;
+            
+        }
+        #user-b{
+            position:relative;
+            top:5cm;
+            left:40%;
+            font-size:0.5cm;
+            text-transform:uppercase;
+            text-decoration: none;
+            background-color: #4858eb;
+            color:#ffffff;
+            padding:0.3cm;
+            border:0px solid transparent;
+            border-radius: 10px;
+            transition-duration: 1s;
+        }
+        #user-b:hover{
+            background-color: #b0e8fc;
+            color:#08020e;
+            transition-duration: 1s;
+        }
+        #about-us{
+            position:relative;
+            top:0cm;
+            font-size:1cm;
+        }
+        #about-us h4{
+            position:relative;
+            top:1cm;
+            left:60%;
+            font-size:0.7cm;
+            font-family: 'Roboto',sans-serif;
+            font-weight:400;
+            color:#390e5c;
+        }
+        #about-us #h{
+            left:65%;
+        }
+        #about-us p{
+            position: relative;
+            top:2cm;
+            text-align: left;
+            width:50%;
+            left:50%;
+            overflow:wrap;
+            font-size: 0.6cm;
+            color:#b0abb4;
+            font-family: 'Roboto',sans-serif;
+            font-weight:100;
+            animation-name:textGlow;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes textGlow {
+            0%{
+                text-shadow: 0 0 0px #cfcfcf;
+            }
+            50%{
+                text-shadow: 0 0 10px #cfcfcf;
+            }
+            100%{
+                text-shadow: 0 0 0px #cfcfcf;
+            }
+        }
+        #about-img{
+            position: relative;
+            top:12cm;
+            height:10cm;
+            width:12cm;
+            left:3cm;
+            border:0px solid transparent;
+            clip-path:fill-box;
+        }
+        #police-section{
+            position:relative;
+            top:3cm;
+            left:35%;
+            
+        }
+        #police-section h4{
+            font-size:1cm;
+            position: relative;
+            top:3cm;
+        }
+        #police-section .police-b{
+            position:relative;
+            top:3cm;
+            left:2cm;
+            background-color: #2d69c4;
+            color:#ffffff;
+            padding:0.3cm;
+            border:0px solid transparent;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size:0.3cm;
+            text-transform: uppercase;
+            font-family: 'ubuntu',sans-serif;
+            font-weight: 300;
+            transition-duration: 0.5s;
+        }
+        #police-section .police-b:hover{
+            background-color: #dbfbff;
+            box-shadow:0 0 10px #dbfbff;
+            color:#0d0c4e;
+            transition-duration: 0.5s;
+        }
+        #police-section #police-login{
+            position: relative;
+            padding-left:1cm;
+            padding-right:1cm;
+        }
+        #police-section #police-register{
+            position: relative;
+            padding-left:1cm;
+            padding-right:1cm;
+            margin-left: 1cm;
+        }
+        #contact-form{
+            position:relative;
+            top:10cm;
+            left:-1cm;
+            width:50%;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        #contact-form .part-1{
+            display:flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        #contact-form .part-1 .lbls,.flds{
+            display:flex;
+            flex-direction: column;
+            justify-content: space-around;
+            line-height: 1.5cm;
+            font-size:0.5cm;
+        }
+        #contact-form .part-1 .lbls{
+            position: relative;
+            left:3cm;
+        }
+        #contact-form .part-1 #uid{
+            position:relative;
+            top:1cm;
+            height:1cm;
+            font-size:0.5cm;
+            border:0px solid transparent;
+            border-bottom: 1px solid #08020e;
+            background-color: transparent;
+        }
+        #contact-form .part-1 #uid::placeholder{
+            font-family: 'monteserrat',sans-serif;
+            font-size:0.5cm;
+        }
+        #contact-form .part-1 #mssg{
+            position: relative;
+            top:2cm;
+            height:5cm;
+            width:100%;
+            background-color: transparent;
+            border-radius: 10px;
+        }
+        #contact-form .part-1 #mssg::placeholder{
+            font-family: 'monteserrat',sans-serif;
+            font-size:0.5cm;
+        }
+        #contact-form #sub{
+            position: relative;
+            top:3cm;
+            left:5.5cm;
+            background-color: #346eda;
+            color:#ffffff;
+            padding:0.3cm;
+            border:0px solid transparent;
+            height:1cm;
+            border-radius: 1cm;
+            width:60%;
+            transition-duration: 0.2s;
+        }
+        #contact-form #sub:hover{
+            border-radius: 0.2cm;
+            transition-duration: 0.2s ;
+            box-shadow: 0 10px 10px #346eda;
+        }
+        #contact-head{
+            position:relative;
+            top:10cm;
+            left:1cm;
+        }
+        footer{
+            text-align: center;
+            position: relative;
+            top:14cm;
+            background-color: #7385d6;
+            padding-top:1cm;
+            padding-bottom:1cm;
+            font-weight: 600;
+            color:#2b143a;
+        }
+        </style>
+        <script>
+            a="Travel Smart, Travel Safe";
+             function sleep(millisec){
+                return new Promise(resolve=>{
+                    setTimeout(()=>{resolve('')},millisec);
+                })
+            }
+            async function typit(){
+                await sleep(20);
+                for(let x=0;x<a.length;x++){
+                    document.getElementById("welcome").innerHTML=document.getElementById("welcome").innerHTML+a[x];
+                    await sleep(20);
+                }
+            }
+            function shift(){
+               document.body.scrollTop="100%";
+            }
+        </script>
+    </head>
+    <body onload="typit()">
+        <header>
+            <img id="logo" src="logo.svg"><div id="options-bar"><div id="home" class="option">HOME</div><div id="about" class="option">ABOUT</div><div id="contacts" class="option">CONTACT US</div><a id="police" class="options">POLICE SECTIONS</a></div>
+        </header>
+        <h1 id="opener">Welcome to our Website</h1>
+        <div id="welcome"></div>
+        <a href="/user" role="button" id="user-b">Check Your Safety</a>
+        <!--doodle-->
+        <!---->
+        <div id="about-us">
+            <img id="about-img" src="police-pic.svg">
+            <div id="content">
+                <h4 id="h">About us</h4>
+                <h4><i>Your Safety, Our Priority!</i></h4>
+                <p>
+                    Our team works both for the general public as well as the police to provide the optimum level of security information needed to ensure the safest possible travelling experience to all our users.
+                    With just a click, you will get to know the security status of your favourite destination. Our data is accurate and reliable as it is directly linked to the Police Department.
+                    Stop worrying about your safety and have a memorable trip.
+                </p>
+            </div>
+        </div>
+    
+        <div id="police-section">
+            <h4>Only for Police Personnel</h4>
+            <a href="/login" class="police-b" id="police-login">Login</a><a href="/register" class="police-b" id="police-register">Register</a>
+        </div>
+        <center>
+            <h1 id="contact-head">Contact Us For Queries</h1>
+            <form id="contact-form">
+                <div class="part-1">
+                    <div class="lbls"><label>Enter Email address:</label><label>Type your query:</label></div>
+                    <div class="flds"><input placeholder="Enter Email" type="email" id="uid"><textarea id="mssg" placeholder="Start Here..."></textarea></div>
+                </div>
+                <input id="sub" type="submit" value="SEND">
+            </form>
+        </center>
+        <footer>
+            <div>Copyrights@2023| All Rights Reserved | This template is made by Team Web Maniacs.</div>
+        </footer>
+    </body>
+</html>

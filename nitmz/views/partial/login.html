@@ -1,0 +1,166 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@200;400&family=Roboto:wght@100;500&display=swap" rel="stylesheet">
+        <style>
+            h1{
+                font-family: 'Dancing Script', cursive;
+                font-size:2cm;
+            }
+            #log-lbl{
+                position:relative;
+                visibility:visible;
+                top:0.6cm;
+                font-family:'Roboto',sans-serif;
+                font-weight:500;
+            }
+            #loginform{
+                position:relative;
+                visibility:visible;
+            }
+            #regform{
+                position:absolute;
+                visibility: hidden;
+            }
+            #reg-lbl{
+                position:absolute;
+                visibility:hidden;
+            }
+            form{
+                position:relative;
+                top:0.6cm;
+                width:60%;
+                height:50%;
+                display:flex;
+                flex-direction:column;
+                justify-content: space-around;
+                background-color: #e9e8e6;
+                padding:1cm;
+                border:0px solid transparent;
+                border-radius:20px;
+                font-size:0.5cm;
+                color:#473e50;
+                font-family: 'Montserrat', sans-serif;     
+            }
+            form #pass{
+                position:relative;
+                top:0cm;
+            }
+            form .user-fld{
+                height:1cm;
+                border-bottom: 1px solid #08020e;
+                background-color: transparent;
+            }
+            form input{
+                border:0px solid transparent;
+                font-size: 0.5cm;
+            }
+            form input::placeholder{
+                font-size: 0.5cm;
+                font-family: 'Montserrat', sans-serif;     
+            }
+            form #log{
+                font-size: 0.5cm;
+                padding-top:0.3cm;
+                padding-bottom:0.3cm;
+                height:1.8cm;
+                border-radius: 1.8cm;
+                transition-duration: 1s;
+                filter: invert(0%);
+                background-color: #ffffff;
+                color:#0a0518;
+                font-family: 'Monteserrat',sans-serif;
+                font-weight: 400;
+            }
+            form #log:hover{
+                border-radius: 0.2cm;
+                transition-duration: 1s;
+                filter:invert(100%);
+            }
+            #user{
+                position: relative;
+                top:2cm;
+                font-size: 0.5cm;
+                padding-top:0.3cm;
+                padding-bottom:0.3cm;
+                height:1.8cm;
+                border-radius: 1.8cm;
+                transition-duration: 1s;
+                filter: invert(0%);
+                background-color: #ffffff;
+                color:#0a0518;
+                font-family: 'Monteserrat',sans-serif;
+                font-weight: 400;
+                text-decoration: none;
+            }
+            #user:hover{
+                border-radius: 0.2cm;
+                transition-duration: 1s;
+                filter:invert(100%);
+            }
+            form .part-1{
+                display:flex;flex-direction:row; justify-content: space-around;
+                height:40%;
+            }
+            form .part-1 .lbls,.flds{
+                display:flex;flex-direction:column;justify-content:space-around;
+            }
+            form .part-1 .utype-cont{
+                display:flex;flex-direction:row;
+                justify-content: space-around;
+                font-size:0.5cm;
+                color:#473e50;
+            }
+            form .part-1 .utype-cont .inner-cont{
+                display:flex;flex-direction: column;
+                justify-content: space-around;
+            }
+            form .part-1 .utype-cont .inner-cont #p-user{
+                /* position:absolute;
+                left:-0.2cm; */
+            }
+        
+        </style>
+        <script>
+            function login(){
+                if(document.getElementById("g-user").checked){
+                    document.getElementById("loginform").action="user.html";
+                }
+                else if(document.getElementById("p-user").checked){
+                    document.getElementById("loginform").action="police.html";
+                }
+            }
+            function register(){
+                alert();
+                document.getElementById("loginform").style.visibility="hidden";
+                document.getElementById("loginform").style.position="absolute";
+                document.getElementById("log-lbl").style.visibility="hidden";
+                document.getElementById("log-lbl").style.position="absolute";
+                //
+                document.getElementById("regform").style.visibility="visible";
+                document.getElementById("regform").style.position="relative";
+                document.getElementById("reg-lbl").style.visibility="visible";
+                document.getElementById("reg-lbl").style.position="relative";
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+        <h1>Travel Safe!!</h1>
+        <h1 id="log-lbl">LOGIN</h1>
+        <form id="loginform" method="post" target="_blank" action="#">
+            <div class="part-1">
+                <div class="lbls"><label>Enter Username:</label><label>Enter Password:</label></div>
+                <div class="flds"><input placeholder="Enter Username" type="text" class="user-fld" id="uid"><input placeholder="Enter Password" type="password" class="user-fld" id="pass"></div>
+            </div>
+            <input id="log" type="submit" value="LOGIN" onclick="login()">
+        </form>
+        <fieldset>
+            <h1>OR</h1>
+            <a id="ggl" role="button">Sign in with Google</a>
+        </fieldset>
+
+        </center>
+    </body>
+</html>
