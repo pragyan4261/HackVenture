@@ -126,12 +126,7 @@ padding-right:1cm;
 transition-duration: 1s;
 }
 
-#safe:hover{
-left:-5.5cm;
-transition-duration: 1s;
-padding-left:2cm;
-padding-right:2cm;
-}
+
 #depict{
 position: relative;
 top:15cm;

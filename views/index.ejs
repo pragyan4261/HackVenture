@@ -1,152 +1,397 @@
 <%- include('partial/header') %> 
-<style>
-    h1{
-    font-family: 'Dancing Script', cursive;
-    font-size:2cm;
-}
-#log-lbl{
-    position:relative;
-    visibility:visible;
-    top:0.6cm;
-    font-family:'Roboto',sans-serif;
-    font-weight:500;
-}
-#loginform{
-    position:relative;
-    visibility:visible;
-}
-#regform{
-    position:absolute;
-    visibility: hidden;
-}
-#reg-lbl{
-    position:absolute;
-    visibility:hidden;
-}
-form{
-    position:relative;
-    top:0.6cm;
-    width:60%;
-    height:50%;
-    display:flex;
-    flex-direction:column;
+
+
+
+
+    
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                overflow-x: hidden;
+                background-image: linear-gradient(180deg,#b3f4ff,#ffffff);
+                font-family: 'Monteserrat',sans-serif;
+
+            }
+            html{
+                scroll-behavior: smooth;
+            }
+            #logo{
+                position: relative;
+                left:-3cm;
+                height:2.5cm;
+                width:2.5cm;
+                clip-path: circle();
+            }
+            /* #doodle-holder{
+                position:relative;
+                z-index:-1;
+                top:3cm;
+                height:15cm;
+                width:100%;
+                background-image: url("images/doodle.svg");
+                background-repeat: no-repeat;
+                background-position:top;
+                background-size:cover;
+                opacity:0.2;
+            } */
+            #navbar{
+                position: sticky;
+                top: 0;
+                left: 0;
+                width:100%;
+                display:flex;
+                flex-direction:row;
+                justify-content: space-around;
+                color:#390e5c;
+                background-color: #ffffff;
+                z-index:2;
+            }
+            #navbar a{
+                text-decoration:none;
+                margin-top: 0.5cm;
+                font-weight: bold;
+                font-size: 18px;
+            }
+            #navbar #options-bar{
+                position: relative;
+                top:0.5cm;
+                width:60%;
+                display:flex;
+                flex-direction:row;
+                justify-content: space-around;
+
+            }
+            #navbar #options-bar #police{
+                position:relative;
+                left:4cm;
+                top:-0.2cm;
+                word-spacing: 0.2cm;
+                background-color: #0e305c;
+                color:#ffffff;
+                padding:0.2cm;
+                padding-top: 0.2cm;
+                border:0px solid transparent;
+                border-radius: 10px;
+                height:0.6cm;
+                transition-duration: 1s;
+                text-decoration: none;
+            }
+            #navbar #options-bar #police:hover{
+                cursor:pointer;
+                background-color: #e4761d;
+            box-shadow:0 0 10px #e4761d;
+                color:#0e305c;
+                transition-duration: 1s;
+            }
+            #section-1{
+                height: 9cm;
+            }
+
+            #opener{
+                position:relative;
+                left:28%;
+                font-size:1.5cm;
+                top:3cm;
+            }
+            #welcome{
+            position: relative;
+            left:35%;
+            top:3cm;
+            font-size:1cm;
+            color:#000000;
+            width:50%;
+            overflow:wrap;
+            font-family:  'Roboto', sans-serif;
+            font-weight:800;
+            
+        }
+        #user-b{
+            
+            position:relative;
+            top:5cm;
+            left:40%;
+            font-size:0.5cm;
+            text-transform:uppercase;
+            text-decoration: none;
+            background-color: #4858eb;
+            color:#ffffff;
+            padding:0.3cm;
+            border:0px solid transparent;
+            border-radius: 10px;
+            transition-duration: 1s;
+        
+        }
+        #user-b:hover{
+            cursor:pointer;
+            background-color: #e4761d;
+            box-shadow:0 0 10px #e4761d;
+            color:#0e305c;
+            transition-duration: 1s;
+        }
+        #about-us{
+            position:relative;
+            top:0cm;
+            font-size:1cm;
+        }
+        #about-us h4{
+            position:relative;
+            top:1cm;
+            left:60%;
+            font-size:0.7cm;
+            font-family: 'Roboto',sans-serif;
+            font-weight:400;
+            color:#390e5c;
+        }
+        /* #about-us h4{
+            position:relative;
+            top:1cm;
+            left:60%;
+            font-size:0.7cm;
+            font-family: 'Roboto',sans-serif;
+            font-weight:400;
+            color:#390e5c;
+        } */
+        #about-us #h{
+            left:65%;
+        }
+        #about-us p{
+            position: relative;
+            top:2cm;
+            text-align: left;
+            width:50%;
+            left:50%;
+            overflow:wrap;
+            font-size: 0.6cm;
+            color:#b0abb4;
+            font-family: 'Roboto',sans-serif;
+            font-weight:100;
+            animation-name:textGlow;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes textGlow {
+            0%{
+                text-shadow: 0 0 0px #cfcfcf;
+            }
+            50%{
+                text-shadow: 0 0 10px #cfcfcf;
+            }
+            100%{
+                text-shadow: 0 0 0px #cfcfcf;
+            }
+        }
+        #about-img{
+            position: relative;
+            top:12cm;
+            height:10cm;
+            width:12cm;
+            left:3cm;
+            border:0px solid transparent;
+            clip-path:fill-box;
+        }
+        #police-section{
+            position:relative;
+            top:3cm;
+            left:35%;
+            
+        }
+        #police-section h4{
+            font-size:1cm;
+            position: relative;
+            top:3cm;
+        }
+        #police-section .police-b{
+            position:relative;
+            top:4cm;
+            left:2cm;
+            background-color: #2d69c4;
+            color:#ffffff;
+            padding:0.3cm;
+            border:0px solid transparent;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size:0.3cm;
+            text-transform: uppercase;
+            font-family: 'ubuntu',sans-serif;
+            font-weight: 300;
+            transition-duration: 0.5s;
+        }
+        #police-section .police-b:hover{
+            background-color: #e4761d;
+            box-shadow:0 0 10px #e4761d;
+            color:#ffffff;
+            transition-duration: 0.5s;
+        }
+        #police-section #police-login{
+            position: relative;
+            padding-left:1cm;
+            padding-right:1cm;
+        }
+        #police-section #police-register{
+            position: relative;
+            padding-left:1cm;
+            padding-right:1cm;
+            margin-left: 1cm;
+        }
+        #contact-form{
+            position: relative;
+    top: 12cm;
+    left: 9cm;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
     justify-content: space-around;
-    background-color: #e9e8e6;
-    padding:1cm;
-    border:0px solid transparent;
-    border-radius:20px;
-    font-size:0.5cm;
-    color:#473e50;
-    font-family: 'Montserrat', sans-serif;     
-}
-form #pass{
-    position:relative;
-    top:0cm;
-}
-form .user-fld{
-    height:1cm;
-    border-bottom: 1px solid #08020e;
-    background-color: transparent;
-}
-form input{
-    border:0px solid transparent;
-    font-size: 0.5cm;
-}
-form input::placeholder{
-    font-size: 0.5cm;
-    font-family: 'Montserrat', sans-serif;     
-}
-form #log{
-    font-size: 0.5cm;
-    padding-top:0.3cm;
-    padding-bottom:0.3cm;
-    height:1.8cm;
-    border-radius: 1.8cm;
-    transition-duration: 1s;
-    filter: invert(0%);
-    background-color: #ffffff;
-    color:#0a0518;
-    font-family: 'Monteserrat',sans-serif;
-    font-weight: 400;
-}
-form #log:hover{
-    border-radius: 0.2cm;
-    transition-duration: 1s;
-    filter:invert(100%);
-}
-#user{
-    position: relative;
-    top:2cm;
-    font-size: 0.5cm;
-    padding-top:0.3cm;
-    padding-bottom:0.3cm;
-    height:1.8cm;
-    border-radius: 1.8cm;
-    transition-duration: 1s;
-    filter: invert(0%);
-    background-color: #ffffff;
-    color:#0a0518;
-    font-family: 'Monteserrat',sans-serif;
-    font-weight: 400;
-    text-decoration: none;
-}
-#user:hover{
-    border-radius: 0.2cm;
-    transition-duration: 1s;
-    filter:invert(100%);
-}
-form .part-1{
-    display:flex;flex-direction:row; justify-content: space-around;
-    height:40%;
-}
-form .part-1 .lbls,.flds{
-    display:flex;flex-direction:column;justify-content:space-around;
-}
-form .part-1 .utype-cont{
-    display:flex;flex-direction:row;
-    justify-content: space-around;
-    font-size:0.5cm;
-    color:#473e50;
-}
-form .part-1 .utype-cont .inner-cont{
-    display:flex;flex-direction: column;
-    justify-content: space-around;
-}
-</style>
+        }
+        #contact-form .part-1{
+            display:flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        #contact-form .part-1 .lbls,.flds{
+            display:flex;
+            flex-direction: column;
+            justify-content: space-around;
+            line-height: 1.5cm;
+            font-size:0.5cm;
+        }
+        #contact-form .part-1 .lbls{
+            position: relative;
+            left:3cm;
+        }
+        #contact-form .part-1 #uid{
+            position:relative;
+            top:1cm;
+            height:1cm;
+            font-size:0.5cm;
+            border:0px solid transparent;
+            border-bottom: 1px solid #08020e;
+            background-color: transparent;
+        }
+        #contact-form .part-1 #uid::placeholder{
+            font-family: 'monteserrat',sans-serif;
+            font-size:0.5cm;
+        }
+        #contact-form .part-1 #uid-1{
+            position:relative;
+            top:1cm;
+            height:1cm;
+            font-size:0.5cm;
+            border:0px solid transparent;
+            border-bottom: 1px solid #08020e;
+            background-color: transparent;
+        }
+        #contact-form .part-1 #uid-1::placeholder{
+            font-family: 'monteserrat',sans-serif;
+            font-size:0.5cm;
+        }
+        #contact-form .part-1 #mssg{
+            position: relative;
+            top:2cm;
+            height:5cm;
+            width:100%;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+        }
+        #contact-form .part-1 #mssg::placeholder{
+            font-family: 'monteserrat',sans-serif;
+            font-size:0.5cm;
+        }
+        #contact-form #sub{
+            position: relative;
+            top:3cm;
+            left:5.5cm;
+            background-color: #346eda;
+            color:#ffffff;
+            padding:0.3cm;
+            border:0px solid transparent;
+            height:1cm;
+            border-radius: 1cm;
+            width:60%;
+            transition-duration: 0.2s;
+        }
+        #contact-form #sub:hover{
+            border-radius: 0.2cm;
+            transition-duration: 0.2s ;
+            box-shadow: 0 10px 10px #346eda;
+        }
+        #contact-head{
+            position:relative;
+            top:10cm;
+            left:16cm;
+        }
+        footer{
+            text-align: center;
+            position: relative;
+            top:14cm;
+            background-color: #b0e8fc;
+            padding-top:1cm;
+            padding-bottom:1cm;
+        }
+        </style>
         <script>
-            function login(){
-                if(document.getElementById("g-user").checked){
-                    document.getElementById("loginform").action="user.html";
-                }
-                else if(document.getElementById("p-user").checked){
-                    document.getElementById("loginform").action="police.html";
+            a="Travel Smart, Travel Safe";
+             function sleep(millisec){
+                return new Promise(resolve=>{
+                    setTimeout(()=>{resolve('')},millisec);
+                })
+            }
+            async function typit(){
+                await sleep(20);
+                for(let x=0;x<a.length;x++){
+                    document.getElementById("welcome").innerHTML=document.getElementById("welcome").innerHTML+a[x];
+                    await sleep(20);
                 }
             }
-            function register(){
-                alert();
-                document.getElementById("loginform").style.visibility="hidden";
-                document.getElementById("loginform").style.position="absolute";
-                document.getElementById("log-lbl").style.visibility="hidden";
-                document.getElementById("log-lbl").style.position="absolute";
-                //
-                document.getElementById("regform").style.visibility="visible";
-                document.getElementById("regform").style.position="relative";
-                document.getElementById("reg-lbl").style.visibility="visible";
-                document.getElementById("reg-lbl").style.position="relative";
+            function shift(){
+               document.body.scrollTop="100%";
             }
         </script>
     
-    <body>
-        <center>
-        <h1>Travel Safe!!</h1>
-        <h1 id="log-lbl">LOGIN</h1>
-        <form id="loginform" method="post" target="_blank" action="/login">
-            <div class="part-1">
-                <div class="lbls"><label>Enter Username:</label><label>Enter Password:</label></div>
-                <div class="flds"><input placeholder="Enter Username(for police end)" type="text" class="user-fld" id="uid"><input placeholder="Enter Password(for police end)" type="password" class="user-fld" id="pass"></div>
+    <body onload="typit()">
+        <nav id="navbar">
+            <img id="logo" src="images/logo.svg"><div id="options-bar"><a href="/#section-1"><div id="home" class="option">HOME</div></a><a href="/#about-us"><div id="about" class="option">ABOUT</div></a><a href="/#contact-form"><div id="contacts" class="option">CONTACT US</div></a><a id="police" href="/#contact-form" class="options">POLICE SECTIONS</a></div>
+        </nav>
+        <section id="section-1">
+        <h1 id="opener">Welcome to our Website</h1>
+        <div id="welcome"></div>
+        <a href="/user" role="button" id="user-b">Check Your Safety</a>
+        <!--doodle-->
+        <!-- <div id="doodle-holder">.</div> -->
+    </section>
+        <!---->
+        <div id="about-us">
+            <img id="about-img" src="images/police-pic.svg">
+            <div id="content">
+                <h4 id="h">About us</h4>
+                <h4><i>Your Safety, Our Priority!</i></h4>
+                <p>
+                    Our team works both for the general public as well as the police to provide the optimum level of security information needed to ensure the safest possible travelling experience to all our users.
+                    With just a click, you will get to know the security status of your favourite destination. Our data is accurate and reliable as it is directly linked to the Police Department.
+                    Stop worrying about your safety and have a memorable trip.
+                </p>
             </div>
-            <input id="log" type="submit" value="LOGIN" onclick="login()">
+        </div>
+    
+        <div id="police-section">
+            <h4>Only for Police Personnel</h4>
+            <a href="/login" class="police-b" id="police-login">Login</a><a href="/register" class="police-b" id="police-register">Register</a>
+        </div>
+        <h1 id="contact-head">Contact Us For Queries</h1>
+        <form id="contact-form" method="post">
+            <div class="part-1">
+                <div class="lbls"><label>Enter Email address:</label><label>Enter Your Name</label><label>Type your query:</label></div>
+                <div class="flds"><input placeholder="Enter Email" type="email" id="uid" name="email">
+                    <input placeholder="Enter Your Name" type="text" name="username" id="uid-1"><textarea id="mssg" name="message" placeholder="Start Here..."></textarea></div>
+            </div>
+            <input id="sub" type="submit" value="SEND">
         </form>
-        <a id="user" href="">Click Here to go to User Page</a>
-        </center>
+        <footer>
+            <div>Copyrights@2023| All Rights Reserved | This template is made by Team Web Maniacs.</div>
+        </footer>
+
+        </body>
+    
         <%- include('partial/footer') %> 

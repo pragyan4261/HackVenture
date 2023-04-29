@@ -126,10 +126,9 @@ transition-duration: 1s;
 }
 
 #safe:hover{
-left:-5.5cm;
-transition-duration: 1s;
-padding-left:2cm;
-padding-right:2cm;
+    transition-duration: 1s;
+    background-color: #ab5cf5;
+    color:#34065f;
 }
 #code-form #code{
 position:relative;
